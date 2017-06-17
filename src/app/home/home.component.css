@@ -1,0 +1,10 @@
+#wrapper{
+    background-color: lightblue;
+    border: 2px solid darkblue;
+    width: 100%;
+    margin: 0px auto;
+    padding: 10px;
+}
+h3, h2, p{
+    margin: 5px 10px 10px 10px;
+}

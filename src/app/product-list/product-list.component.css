@@ -1,0 +1,29 @@
+#wrapper{
+    background-color: lightblue;
+    border: 2px solid darkblue;
+    width: 100%;
+    margin: 0px auto;
+}
+div{
+    width: 30%;
+    background-color: white;
+    margin: 10px;
+}
+img{
+    width: 100%;
+}
+h2, h3, p{
+    margin: 10px;
+}
+.product{
+    display: inline-block;
+}
+.edit{
+    background-color: lightgoldenrodyellow;
+}
+.delete{
+    background-color: lightcoral;
+}
+button{
+    margin: 10px 0px 10px 10px;
+}

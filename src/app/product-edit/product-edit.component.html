@@ -1,0 +1,36 @@
+<div id="wrapper">
+  <h2>Edit Product</h2>
+  <form #editproduct="ngForm">
+    <label for="title">Title:</label>
+    <input type="text"
+      name="title" 
+      required
+      [(ngModel)]="product.title"
+      #title="ngModel">
+      <p *ngIf="!title.valid" class="note"> Please input a product title</p>
+      <br>
+    <label for="price">Price:</label>
+    <input type="text" 
+      name="price" 
+      required
+      pattern = "^[0-9]+$"
+      [(ngModel)]="product.price"
+      #price="ngModel">
+      <p *ngIf="!price.valid" class="note"> Please input a product title</p>
+      <br>
+    <label for="image">Image url:</label>
+    <input type="text"
+      name="image"
+      required
+      [(ngModel)]="product.url"
+      #image="ngModel">
+      <p *ngIf="!image.valid" class="note"> Please input a product title</p>
+      <br><br>
+    <a [routerLink]="['/products']">
+      <input type="submit" value="Edit" (click)="editProduct()" [disabled]="!editproduct.form.valid" class="edit">
+    </a>
+    <a [routerLink]="['/products']">
+      <button class="delete" (click)="deleteProduct()">Delete</button>
+    </a>
+  </form>
+</div>
